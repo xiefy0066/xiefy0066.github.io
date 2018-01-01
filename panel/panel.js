@@ -41,7 +41,7 @@
                                             <div class="panel-title xfy-border-1px xfy-border-bottom">${options.title}</div>
                                             <div class="panel-content"><div class="xfy-panel-scroll">${options.content}</div></div>
                                             <div class="close">
-                                                <div><img src="../../img/panel_close.png" alt=""></div>
+                                                <div><img src="../img/panel_close.png" alt=""></div>
                                             </div>
                                         </div>
                                     </div>` ;
