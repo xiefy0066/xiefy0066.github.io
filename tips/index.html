@@ -1,10 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./tips.css">
+    <script src="https://cdn.bootcss.com/zepto/1.1.7/zepto.min.js"></script>
+    <script src="./tips.js"></script>
 </head>
 <body>
-	<a href="./goTop/index.html">goTop</a>
+
+<button class="xfy-btn">弹出框tips，11111</button>
+<button class="xfy-btn">弹出框tips,22222222</button>
+<button class="xfy-btn">弹出框tips,22223333333332222</button>
+
+<script>
+
+    $('.xfy-btn').on('click',function(){
+            var html = $(this).html();
+            $('body').xfyTips({
+                content:html
+            })
+    });
+
+</script>
+
 </body>
 </html>
