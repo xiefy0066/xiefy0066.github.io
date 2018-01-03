@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div1{
+            width: 100px;
+            height: 100px;
+            background:#44BF97;
+
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background: #ccc;
+            position: absolute;
+            left:115px;
+            top:8px;
+            display: none;
+            padding:10px;
+        }
+        #div2 a,#div1 a{
+            color:#fff;
+            padding:4px;
+        }
+         #div2 a:hover,#div1 a:hover{
+            color:#44Be97;
+         }
+
+    </style>
+    <script>
+        window.onload = function(){
+            var oDiv1 = document.getElementById('div1');
+            var oDiv2 = document.getElementById('div2');
+
+            var timer = null;
+            oDiv1.onmouseenter = oDiv2.onmouseenter = function(){
+                clearTimeout(timer);
+                oDiv2.style.display = 'block';
+            };
+            oDiv1.onmouseleave = oDiv2.onmouseleave = function(){
+                timer = setTimeout(function(){
+                    oDiv2.style.display = 'none';
+                },400);
+            };
+        };
+    </script>
+</head>
+<body>
+<div id="div1">
+    <a href="javascript:;">111111</a>
+
+</div>
+<div id="div2">
+    <a href="javascript:;">222</a>
+    <a href="javascript:;">222</a>
+    <a href="javascript:;">222</a>
+    <a href="javascript:;">222</a>
+</div>
+</body>
+</html>
+
+
+

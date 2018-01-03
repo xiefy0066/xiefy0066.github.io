@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://cdn.bootcss.com/zepto/1.1.7/zepto.min.js"></script>
+
+    <script>
+        window.onload=function(){
+            var aInput = document.getElementsByTagName('input');
+            var sum = 0;
+            aInput[0].onclick = function(){
+                //要操作下面一组复选框，要用循环
+                for(var i = 1;i<aInput.length; i++){
+                    aInput[i].checked = this.checked;
+                    sum = this.checked ? aInput.length-1 : 0;
+                    document.title = sum; //sum的值显示在title上。
+                }
+
+            }
+            //第0个是全选，下面的循环从第1个开始。
+            for(var i = 1 ; i< aInput.length;i++) {
+                aInput[i].onclick = function () {
+                    /*if(this.checked){
+                        sum++;
+                    }
+                    else{sum--};*/
+                    this.checked?sum++:sum--;
+                    document.title = sum;
+
+                    aInput[0].checked = ( sum==aInput.length-1 );
+                    /*if (sum == aInput.length - 1) {
+                        aInput[0].checked = true;
+                    }else {
+                        aInput[0].checked = false;
+                    }*/
+                };
+            }
+        };
+
+    </script>
+</head>
+<body>
+<input type="checkbox" name="" id="btn1" />
+<hr/>
+<div id="div1">
+    <input type="checkbox" name="" id="" />
+    <input type="checkbox" name="" id="" />
+    <input type="checkbox" name="" id="" />
+    <input type="checkbox" name="" id="" />
+    <input type="checkbox" name="" id="" />
+    <input type="checkbox" name="" id="" />
+</div>
+</body>
+</html>

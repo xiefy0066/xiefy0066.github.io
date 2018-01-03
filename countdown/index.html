@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>countdown</title>
+    <script src="https://cdn.bootcss.com/zepto/1.1.7/zepto.min.js"></script>
+
+    <script>
+        $(function(){
+            var oDate = new Date();
+            oDate.setFullYear(2018,1,16);
+            oDate.setHours(0,0,0);
+            function toD(a){
+                return a<10?'0'+a:a;
+            }
+            function clock(){
+                var now = new Date();
+                var a = oDate.getTime()-now.getTime();
+                var s = parseInt(a/1000);
+                var d = parseInt(s/(24*60*60));
+                s%=24*60*60;
+                var h = parseInt(s/(60*60));
+                s%=60*60;
+                var m=parseInt(s/60);
+                s%=60;
+                $('.xfy-countdown').html(`${d}天${toD(h)}:${toD(m)}:${toD(s)}`);
+
+
+            }
+            clock();
+            setInterval(clock,1000);
+        })
+    </script>
+</head>
+<body>
+
+<div>
+    倒计时：<span class="xfy-countdown"></span>
+</div>
+</body>
+</html>
