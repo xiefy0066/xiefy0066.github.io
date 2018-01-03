@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <title>barTop</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #bar{
+            width: 100%;
+            height: 40px;
+            background: #CCCCCC;
+            font-size: 1rem;
+            
+        }
+        /*占位*/
+        /*#replace_bar{
+            width: 100%;
+            height: 40px;
+            
+        }*/
+        .hr_40{
+            height:200px;
+        }
+    </style>
+    <script src="https://cdn.bootcss.com/zepto/1.1.7/zepto.min.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
+
+    <script>
+        (function($){
+            $.extend($.fn,{
+
+                barTop:function(){
+
+                    // var html = $(this).clone();
+                    // console.log(html);
+                    // $bar.after(html); 
+
+                    var $bar = $(this);
+                    var barTop = $bar.offset().top;
+                    var height = $bar.height();
+                    console.log(height)
+                    
+                    
+                    $(window).on('scroll',function () {
+                       var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+                        if (scrollTop >= barTop) {
+                           //固定在上方
+                           $bar.css({position: 'fixed',top: 0});
+                           // 显示替代的条
+                           if($('#replace_bar').length == 0){
+                            $bar.after('<div id="replace_bar"></div>');
+
+                            $('#replace_bar').css('height',height+'px');
+                           }
+
+
+                        } else {
+                           $bar.css('position','static');
+                           // 隐藏替代的条
+                           $('#replace_bar').remove();
+                        }
+                    });
+
+
+                }
+            })
+        })(Zepto);
+
+
+        $(function(){
+            
+            $('#bar').barTop()
+        })
+
+//
+//        $(function () {
+//            var barTop = $('#bar').offset().top;
+//            //on方法相当于原生的绑定
+//            $(window).on('scroll',function () {
+//                var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+// //                var scrollTop = $(document.body).scrollTop();
+//                if (scrollTop >= barTop) {
+//                    //固定在上方
+//                    $('#bar').css({position: 'fixed',top: 0});
+//                    // 显示替代的条
+//                    $('#replace_bar').css('display','block');
+//                } else {
+//                    $('#bar').css('position','static');
+//                    // 隐藏替代的条
+//                    $('#replace_bar').css('display','none');
+//                }
+//            });
+//        });
+
+
+    </script>
+</head>
+<body>
+<div class="askBox">
+    <div class="hr_40">1</div>
+    <div class="hr_40">1</div>
+    <div class="hr_40">1</div>
+
+    <div id="bar">
+        吸顶条--吸附顶部
+    </div>
+    
+
+    
+    <div class="hr_40">2</div>
+    <div class="hr_40">2</div>
+    <div class="hr_40">2</div>
+    <div class="hr_40">2</div>
+    <div class="hr_40">2</div>
+    <div class="hr_40">2</div>
+    <div class="hr_40">2</div>
+    <div class="hr_40">2</div>
+    <div class="hr_40">2</div>
+    <div class="hr_40">2</div>
+    <div class="hr_40">2</div>
+    <div class="hr_40">2</div>
+    <div class="hr_40">2</div>
+    <div class="hr_40">2</div>
+    <div class="hr_40">2</div>
+    <div class="hr_40">2</div>
+    <div class="hr_40">2</div>
+
+
+
+
+
+</div>
+</body>
+</html>
+
+
+
+
