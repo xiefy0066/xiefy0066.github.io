@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./style.css">
+	<script src="https://cdn.bootcss.com/zepto/1.1.7/zepto.min.js"></script>
+	<script src="./base.js"></script>
+	<script src="./selectDate.js"></script>
+</head>
+<body>
+
+	<div id="demo" class="jrm-button jrm-button-three">选择日期</div>
+	
+	<script type="text/javascript">
+		
+		$('#demo').on('click',function(){
+			$('#demo').selectdate({data:'2000-01-15',min:'1950/01/01',max:'2018/01/15'});
+		});
+
+	</script>
+</body>
+</html>

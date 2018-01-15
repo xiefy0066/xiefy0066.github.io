@@ -1,0 +1,283 @@
+* {
+	-webkit-tap-highlight-color: transparent;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0
+}
+
+:after,:before {
+	box-sizing: border-box
+}
+
+blockquote,body,button,code,dd,div,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,pre,td,textarea,th,ul {
+	-webkit-tap-highlight-color: transparent
+}
+
+
+:focus {
+	outline: 0
+}
+
+li,ul {
+	list-style: none
+}
+
+
+img {
+	vertical-align: middle
+}
+
+button,input,optgroup,select,textarea {
+	font: inherit;
+	color: inherit;
+	-moz-appearance: none;
+	-webkit-appearance: none
+}
+
+input {
+	line-height: normal;
+	color: #333;
+	border: none;
+	outline: 0;
+	-webkit-tap-highlight-color: transparent
+}
+
+
+.jrm-bg-color-fff {
+	background-color: #fff
+}
+
+.jrm-pr {
+	position: relative
+}
+
+.jrm-auto {
+	margin: 0 auto
+}
+
+.jrm-fl {
+	float: left
+}
+
+.jrm-fr {
+	float: right
+}
+
+.jrm-bfc {
+	overflow: hidden;
+	*zoom: 1
+}
+
+.jrm-bfc:after,.jrm-bfc:before {
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	content: ''
+}
+
+.jrm-bfc:after {
+	clear: both
+}
+
+.jrm-hide {
+	display: none
+}
+
+.jrm-hidden {
+	visibility: hidden
+}
+
+.jrm-show {
+	display: block
+}
+
+.jrm-w100p {
+	width: 100%
+}
+
+.jrm-h100p {
+	height: 100%
+}
+
+.jrm-txt-center {
+	text-align: center
+}
+
+.jrm-of-scrolling {
+	-webkit-overflow-scrolling: touch;
+	overflow-y: auto
+}
+
+.jrm-border-1px {
+	position: relative
+}
+
+.jrm-border-1px:before {
+	display: block;
+	visibility: visible;
+	content: '';
+	overflow: auto;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	pointer-events: none;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:2) {
+	.jrm-border-1px:before {
+		right: -100%;
+		bottom: -100%;
+		-webkit-transform: scale(0.5);
+		transform: scale(0.5)
+	}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:3) {
+	.jrm-border-1px:before {
+		right: -200%;
+		bottom: -200%;
+		-webkit-transform: scale(0.33333);
+		transform: scale(0.33333)
+	}
+}
+
+.jrm-border-1px.jrm-border-all:before {
+	border: 1px solid #eee
+}
+
+.jrm-border-1px.jrm-border-top:before {
+	border-top: 1px solid #eee
+}
+
+.jrm-border-1px.jrm-border-bottom:before {
+	border-bottom: 1px solid #eee
+}
+
+.jrm-border-1px.jrm-border-left:before {
+	border-left: 1px solid #eee
+}
+
+.jrm-border-1px.jrm-border-right:before {
+	border-right: 1px solid #eee
+}
+
+.jrm-border-1px.jrm-border-left-fff:before {
+	border-left: 1px solid rgba(255,255,255,.15)
+}
+
+.jrm-border-1px.jrm-border-right-ddd:before {
+	border-right: 1px solid #ddd
+}
+
+.jrm-border-1px.jrm-border-all-ddd:before {
+	border: 1px solid #ddd
+}
+
+.jrm-border-1px.jrm-border-bottom-e5e5e5:before {
+	border-bottom: 1px solid #e5e5e5
+}
+
+.jrm-radius-50p,.jrm-radius-50p:after,.jrm-radius-50p:before {
+	border-radius: 50%
+}
+
+.jrm-row .jrm-md-1,.jrm-row .jrm-md-10,.jrm-row .jrm-md-11,.jrm-row .jrm-md-12,.jrm-row .jrm-md-2,.jrm-row .jrm-md-3,.jrm-row .jrm-md-4,.jrm-row .jrm-md-5,.jrm-row .jrm-md-6,.jrm-row .jrm-md-7,.jrm-row .jrm-md-8,.jrm-row .jrm-md-9 {
+	float: left
+}
+
+.jrm-row .jrm-md-12 {
+	width: 100%
+}
+
+.jrm-row .jrm-md-11 {
+	width: 91.66666667%
+}
+
+.jrm-row .jrm-md-10 {
+	width: 83.33333333%
+}
+
+.jrm-row .jrm-md-9 {
+	width: 75%
+}
+
+.jrm-row .jrm-md-8 {
+	width: 66.66666667%
+}
+
+.jrm-row .jrm-md-7 {
+	width: 58.33333333%
+}
+
+.jrm-row .jrm-md-6 {
+	width: 50%
+}
+
+.jrm-row .jrm-md-5 {
+	width: 41.66666667%
+}
+
+.jrm-row .jrm-md-4 {
+	width: 33.33333333%
+}
+
+.jrm-row .jrm-md-3 {
+	width: 25%
+}
+
+.jrm-row .jrm-md-2 {
+	width: 16.66666667%
+}
+
+.jrm-row .jrm-md-1 {
+	width: 8.33333333%
+}
+
+.jrm-tap-bg {
+	position: relative;
+	background-color: #F2F2F2!important
+}
+
+.jrm-tap {
+	position: relative
+}
+
+.jrm-tap:after {
+	content: '';
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.05)
+}
+
+.j.rm-tap:after img {
+	opacity: .8
+}
+
+.jrm-disable {
+	background-color: #F5F5F5
+}
+
+.jrm-disable:after {
+	visibility: hidden
+}
+.jrm-pl32{
+	padding-left: 1rem;
+}
+.jrm-pr32{
+	padding-right: 1rem;
+}
